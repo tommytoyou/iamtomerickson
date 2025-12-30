@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { projects } from "../data/siteData";
 import { Card, SectionHeader } from "../components";
-import { ImageIcon } from "../components/Icons";
+import { ImageIcon, ExternalLinkIcon } from "../components/Icons";
 
 const categories = ["All", "Space Tech", "AI/Space", "GenAI/SaaS", "Web Dev", "Marketing", "Consulting"];
 
@@ -159,6 +159,19 @@ function Projects() {
                       </span>
                     ))}
                   </div>
+
+                  {/* View Live Link */}
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-accent-500 hover:text-accent-600 dark:hover:text-accent-400 font-medium text-sm transition-colors"
+                    >
+                      View Live
+                      <ExternalLinkIcon className="w-4 h-4" />
+                    </a>
+                  )}
                 </Card>
               </motion.div>
             ))}

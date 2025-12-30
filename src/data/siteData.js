@@ -179,7 +179,8 @@ export const projects = [
     company: "Deep Space Dynamics",
     category: "GenAI/SaaS",
     description: "AI-powered application automating SBIR Phase 1 grant workflows from ideation to submission.",
-    tags: ["GenAI", "SaaS", "Grant Writing", "Automation"]
+    tags: ["GenAI", "SaaS", "Grant Writing", "Automation"],
+    url: "https://www.grantentic.us/"
   },
   {
     id: "wild-roots",
