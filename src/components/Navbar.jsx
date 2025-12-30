@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../hooks";
 import { navigation } from "../data/siteData";
@@ -8,6 +9,7 @@ function Navbar() {
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   // Handle scroll state
   useEffect(() => {
@@ -46,6 +48,13 @@ function Navbar() {
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);
+  };
+
+  const isActive = (href) => {
+    if (href === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname.startsWith(href);
   };
 
   const menuVariants = {
@@ -99,25 +108,36 @@ function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="font-display text-xl md:text-2xl font-bold text-navy-900 dark:text-white hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
             >
               Tom<span className="text-accent-500">.</span>Erickson
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <ul className="flex items-center gap-6">
                 {navigation.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="relative text-navy-600 dark:text-navy-300 hover:text-accent-500 dark:hover:text-accent-400 transition-colors py-2 group"
+                    <Link
+                      to={item.href}
+                      className={`
+                        relative py-2 transition-colors group
+                        ${isActive(item.href)
+                          ? "text-accent-500 dark:text-accent-400"
+                          : "text-navy-600 dark:text-navy-300 hover:text-accent-500 dark:hover:text-accent-400"
+                        }
+                      `}
                     >
                       {item.name}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-500 transition-all duration-300 group-hover:w-full" />
-                    </a>
+                      <span
+                        className={`
+                          absolute bottom-0 left-0 h-0.5 bg-accent-500 transition-all duration-300
+                          ${isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"}
+                        `}
+                      />
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -210,13 +230,19 @@ function Navbar() {
                         initial="closed"
                         animate="open"
                       >
-                        <a
-                          href={item.href}
+                        <Link
+                          to={item.href}
                           onClick={handleLinkClick}
-                          className="block px-4 py-3 rounded-lg text-navy-700 dark:text-navy-200 hover:bg-accent-500/10 hover:text-accent-500 dark:hover:text-accent-400 transition-all font-medium"
+                          className={`
+                            block px-4 py-3 rounded-lg font-medium transition-all
+                            ${isActive(item.href)
+                              ? "bg-accent-500/10 text-accent-500 dark:text-accent-400"
+                              : "text-navy-700 dark:text-navy-200 hover:bg-accent-500/10 hover:text-accent-500 dark:hover:text-accent-400"
+                            }
+                          `}
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </motion.li>
                     ))}
                   </ul>

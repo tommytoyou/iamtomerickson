@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { personalInfo, navigation } from "../data/siteData";
@@ -48,19 +49,19 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
           {/* Column 1: Brand */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="inline-block font-display text-2xl font-bold text-navy-900 dark:text-white"
             >
               Tom<span className="text-accent-500">.</span>Erickson
-            </a>
+            </Link>
             <p className="text-navy-600 dark:text-navy-300 leading-relaxed">
               {personalInfo.tagline}
             </p>
             <div className="flex items-center gap-2 text-navy-500 dark:text-navy-400">
               <MapPinIcon className="w-4 h-4 text-accent-500" />
               <span>{personalInfo.location}</span>
-              <span className="text-accent-500">•</span>
+              <span className="text-accent-500">|</span>
               <span>{personalInfo.locationNote}</span>
             </div>
           </motion.div>
@@ -73,12 +74,12 @@ function Footer() {
             <ul className="space-y-3">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="text-navy-600 dark:text-navy-300 hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -114,12 +115,12 @@ function Footer() {
           {/* Bottom Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-navy-500 dark:text-navy-400">
             <p>
-              © {currentYear} {personalInfo.name}. All rights reserved.
+              &copy; {currentYear} {personalInfo.name}. All rights reserved.
             </p>
             <p className="flex items-center gap-1">
               Built with{" "}
-              <span className="text-red-500 animate-pulse">♥</span>{" "}
-              in Kampot, Cambodia
+              <span className="text-red-500 animate-pulse">&#x2665;</span>{" "}
+              in Cambodia
             </p>
           </div>
         </motion.div>
