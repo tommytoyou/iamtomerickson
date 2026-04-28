@@ -5,6 +5,33 @@ import { projects } from "../data/siteData";
 import { Card, SectionHeader } from "../components";
 import { ImageIcon, ExternalLinkIcon } from "../components/Icons";
 
+function ProjectImage({ src, alt }) {
+  const [hasError, setHasError] = useState(false);
+
+  if (!src || hasError) {
+    return (
+      <>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-300/50 to-navy-400/50 dark:from-navy-600/50 dark:to-navy-700/50" />
+        <div className="relative text-center">
+          <ImageIcon className="w-12 h-12 text-navy-400 dark:text-navy-500 mx-auto mb-2" />
+          <span className="text-sm text-navy-500 dark:text-navy-400">
+            Project Preview
+          </span>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      onError={() => setHasError(true)}
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  );
+}
+
 const categories = ["All", "Space Tech", "AI/Space", "GenAI/SaaS", "Web Dev", "Marketing", "Consulting"];
 
 const categoryColors = {
@@ -114,15 +141,9 @@ function Projects() {
                 transition={{ duration: 0.3 }}
               >
                 <Card className="h-full flex flex-col group">
-                  {/* Image Placeholder */}
-                  <div className="relative h-48 bg-navy-200 dark:bg-navy-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-navy-300/50 to-navy-400/50 dark:from-navy-600/50 dark:to-navy-700/50" />
-                    <div className="relative text-center">
-                      <ImageIcon className="w-12 h-12 text-navy-400 dark:text-navy-500 mx-auto mb-2" />
-                      <span className="text-sm text-navy-500 dark:text-navy-400">
-                        Project Preview
-                      </span>
-                    </div>
+                  {/* Project Image */}
+                  <div className="relative h-56 bg-navy-200 dark:bg-navy-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <ProjectImage src={project.image} alt={project.title} />
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-accent-500/0 group-hover:bg-accent-500/10 transition-colors duration-300" />
                   </div>

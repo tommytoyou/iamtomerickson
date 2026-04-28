@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
@@ -23,6 +24,23 @@ import {
   GlobeIcon,
   UsersIcon,
 } from "../components/Icons";
+
+function HeadshotImage() {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return <UserIcon className="w-24 h-24 md:w-32 md:h-32 text-navy-400 dark:text-navy-500" />;
+  }
+
+  return (
+    <img
+      src="/images/headshot.jpg"
+      alt={personalInfo.name}
+      onError={() => setHasError(true)}
+      className="w-full h-full object-cover"
+    />
+  );
+}
 
 const iconMap = {
   chart: ChartIcon,
@@ -96,10 +114,10 @@ function About() {
           animate={bioInView ? "visible" : "hidden"}
         >
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            {/* Headshot Placeholder */}
+            {/* Headshot */}
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-navy-200 dark:bg-navy-700 flex items-center justify-center border-4 border-navy-300 dark:border-navy-600">
-                <UserIcon className="w-24 h-24 md:w-32 md:h-32 text-navy-400 dark:text-navy-500" />
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-navy-200 dark:bg-navy-700 flex items-center justify-center border-4 border-navy-300 dark:border-navy-600 overflow-hidden">
+                <HeadshotImage />
               </div>
             </motion.div>
 

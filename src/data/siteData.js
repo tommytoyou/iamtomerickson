@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "Tom Erickson",
   credentials: "CAPM",
-  headline: "Founder & CEO (former) building autonomous deep-space infrastructure | AI-driven space weather intelligence & Lagrange-point PNT/comms networks | Project Management & GenAI Consultant",
-  tagline: "I help organizations plan, execute, and deliver high-impact projects at the intersection of technology, aerospace, and AI.",
-  location: "Phnom Penh, Cambodia",
+  headline: "Agentic AI Developer and Technical PM | SBIR Automation · Space Weather Intelligence | DARPA Connect | Open to Gulf Contracts",
+  tagline: "Building production AI systems and leading technical projects across aerospace, government programs, and international markets. Based in Siem Reap, Cambodia.",
+  location: "Siem Reap, Cambodia",
   locationNote: "Remote/Global",
   email: "tom@iamtomerickson.com",
   website: "https://iamtomerickson.com",
@@ -22,10 +22,10 @@ export const personalInfo = {
     "Corporate Training & Leadership Development"
   ],
   stats: [
-    { value: "29+", label: "Consulting Projects" },
+    { value: "37+", label: "Upwork Engagements" },
     { value: "15+", label: "Years Experience" },
-    { value: "20+", label: "Countries" },
-    { value: "2,000+", label: "Team Members Led" }
+    { value: "15+", label: "Clients" },
+    { value: "67%", label: "Repeat Rate" }
   ],
   closingStatement: "Let's build something that matters."
 };
@@ -163,7 +163,8 @@ export const projects = [
     company: "Deep Space Dynamics",
     category: "Space Tech",
     description: "6U CubeSat platform designed for PNT, space weather intelligence, and deep space communications at Venus, Earth, Luna, and Mars Lagrange points (L4/L5).",
-    tags: ["CubeSat", "PNT", "Deep Space", "Aerospace"]
+    tags: ["CubeSat", "PNT", "Deep Space", "Aerospace"],
+    image: "/images/projects/spacedrone.jpg"
   },
   {
     id: "tswi-dashboard",
@@ -171,7 +172,9 @@ export const projects = [
     company: "Deep Space Dynamics",
     category: "AI/Space",
     description: "Real-time Tactical Space Weather Intelligence platform with AI-driven analytics, 25% faster simulations, and autonomous mission planning capabilities.",
-    tags: ["AI", "Dashboard", "Space Weather", "Real-time"]
+    tags: ["AI", "Dashboard", "Space Weather", "Real-time"],
+    url: "https://tswi.us",
+    image: "/images/projects/tswi.jpg"
   },
   {
     id: "grantentic",
@@ -180,7 +183,8 @@ export const projects = [
     category: "GenAI/SaaS",
     description: "AI-powered application automating SBIR Phase 1 grant workflows from ideation to submission.",
     tags: ["GenAI", "SaaS", "Grant Writing", "Automation"],
-    url: "https://www.grantentic.us/"
+    url: "https://www.grantentic.us/",
+    image: "/images/projects/grantentic.jpg"
   },
   {
     id: "wild-roots",
@@ -188,7 +192,8 @@ export const projects = [
     company: "Parker Dewey",
     category: "Web Dev",
     description: "Full-stack e-commerce application with React frontend, Node.js backend, MongoDB database, secure authentication, and admin dashboard.",
-    tags: ["React", "Node.js", "MongoDB", "E-commerce"]
+    tags: ["React", "Node.js", "MongoDB", "E-commerce"],
+    image: "/images/projects/wildroots.jpg"
   },
   {
     id: "defiant-meals",
@@ -196,7 +201,8 @@ export const projects = [
     company: "Parker Dewey",
     category: "Web Dev",
     description: "Restaurant management and ordering system. Delivered across 5 consecutive projects with repeat client.",
-    tags: ["Full-Stack", "Restaurant Tech", "Repeat Client"]
+    tags: ["Full-Stack", "Restaurant Tech", "Repeat Client"],
+    image: "/images/projects/defiant-meals.jpg"
   },
   {
     id: "myloop-gtm",
@@ -204,7 +210,8 @@ export const projects = [
     company: "Parker Dewey",
     category: "Marketing",
     description: "Mobile app launch strategy including market research, user personas, and cross-channel campaigns. Client feedback: 'executing like an industry veteran.'",
-    tags: ["GTM", "Mobile App", "Marketing Strategy"]
+    tags: ["GTM", "Mobile App", "Marketing Strategy"],
+    image: "/images/projects/myloop.jpg"
   },
   {
     id: "build-grant",
@@ -212,7 +219,8 @@ export const projects = [
     company: "Parker Dewey",
     category: "Consulting",
     description: "$2.5M grant application support with comprehensive benefit-cost analysis for Southeast Kansas Regional Planning Commission.",
-    tags: ["Grant Analysis", "Government", "Economic Development"]
+    tags: ["Grant Analysis", "Government", "Economic Development"],
+    image: "/images/projects/build-grant.jpg"
   }
 ];
 

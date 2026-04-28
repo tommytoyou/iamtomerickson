@@ -5,6 +5,32 @@ import { experience } from "../data/siteData";
 import { Card, SectionHeader } from "../components";
 import { MapPinIcon, ChevronDownIcon, ChevronUpIcon, BriefcaseIcon } from "../components/Icons";
 
+const companyLogos = {
+  "parker-dewey": "/images/logos/parkerdewey.png",
+};
+
+function CompanyLogo({ companyId }) {
+  const [hasError, setHasError] = useState(false);
+  const logoSrc = companyLogos[companyId];
+
+  if (!logoSrc || hasError) {
+    return (
+      <div className="w-12 h-12 rounded-lg bg-navy-200 dark:bg-navy-700 flex items-center justify-center flex-shrink-0">
+        <BriefcaseIcon className="w-6 h-6 text-navy-400 dark:text-navy-500" />
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={logoSrc}
+      alt="Company logo"
+      onError={() => setHasError(true)}
+      className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
+    />
+  );
+}
+
 function Experience() {
   const [expandedId, setExpandedId] = useState(null);
   const [showOlderRoles, setShowOlderRoles] = useState(false);
@@ -120,16 +146,19 @@ function Experience() {
                       )}
 
                       <div className="space-y-4">
-                        {/* Header */}
-                        <div>
-                          <h3 className="font-display text-xl font-semibold text-navy-900 dark:text-white">
-                            {exp.title}
-                          </h3>
-                          <p className="text-accent-500 font-medium">{exp.company}</p>
-                          <div className="flex items-center gap-1 text-sm text-navy-500 dark:text-navy-400 mt-1">
-                            <MapPinIcon className="w-4 h-4" />
-                            {exp.location}
+                        {/* Header with Logo */}
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <h3 className="font-display text-xl font-semibold text-navy-900 dark:text-white">
+                              {exp.title}
+                            </h3>
+                            <p className="text-accent-500 font-medium">{exp.company}</p>
+                            <div className="flex items-center gap-1 text-sm text-navy-500 dark:text-navy-400 mt-1">
+                              <MapPinIcon className="w-4 h-4" />
+                              {exp.location}
+                            </div>
                           </div>
+                          <CompanyLogo companyId={exp.id} />
                         </div>
 
                         {/* Description */}
@@ -274,15 +303,18 @@ function Experience() {
                             >
                               <Card hover={false} className="opacity-90">
                                 <div className="space-y-4">
-                                  <div>
-                                    <h3 className="font-display text-xl font-semibold text-navy-900 dark:text-white">
-                                      {exp.title}
-                                    </h3>
-                                    <p className="text-accent-500 font-medium">{exp.company}</p>
-                                    <div className="flex items-center gap-1 text-sm text-navy-500 dark:text-navy-400 mt-1">
-                                      <MapPinIcon className="w-4 h-4" />
-                                      {exp.location}
+                                  <div className="flex items-start justify-between gap-4">
+                                    <div>
+                                      <h3 className="font-display text-xl font-semibold text-navy-900 dark:text-white">
+                                        {exp.title}
+                                      </h3>
+                                      <p className="text-accent-500 font-medium">{exp.company}</p>
+                                      <div className="flex items-center gap-1 text-sm text-navy-500 dark:text-navy-400 mt-1">
+                                        <MapPinIcon className="w-4 h-4" />
+                                        {exp.location}
+                                      </div>
                                     </div>
+                                    <CompanyLogo companyId={exp.id} />
                                   </div>
 
                                   <p className="text-navy-600 dark:text-navy-300">

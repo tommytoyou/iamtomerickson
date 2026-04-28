@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { personalInfo } from "../data/siteData";
 import { Card, Button, SectionHeader, SocialLinks } from "../components";
-import { MailIcon, MapPinIcon, ExternalLinkIcon, SendIcon } from "../components/Icons";
+import { MailIcon, MapPinIcon, SendIcon } from "../components/Icons";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -130,29 +130,6 @@ function Contact() {
                     </p>
                   </div>
                 </div>
-              </Card>
-
-              {/* Company Website */}
-              <Card hover={false}>
-                <a
-                  href={personalInfo.companyWebsite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 group"
-                >
-                  <div className="p-3 rounded-lg bg-navy-200 dark:bg-navy-700 group-hover:bg-accent-500/20 transition-colors">
-                    <ExternalLinkIcon className="w-6 h-6 text-navy-600 dark:text-navy-300 group-hover:text-accent-500 transition-colors" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-navy-500 dark:text-navy-400">Company</p>
-                    <p className="text-navy-900 dark:text-white font-medium group-hover:text-accent-500 transition-colors">
-                      Deep Space Dynamics
-                    </p>
-                    <p className="text-sm text-accent-500">
-                      deepspacedynamics.us
-                    </p>
-                  </div>
-                </a>
               </Card>
 
               {/* Social Links */}
