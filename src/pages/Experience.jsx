@@ -6,7 +6,7 @@ import { Card, SectionHeader } from "../components";
 import { MapPinIcon, ChevronDownIcon, ChevronUpIcon, BriefcaseIcon } from "../components/Icons";
 
 const companyLogos = {
-  "parker-dewey": "/images/logos/parkerdewey.png",
+  "parker-dewey": "/images/logos/parkerdewey.jpg",
 };
 
 function CompanyLogo({ companyId }) {
