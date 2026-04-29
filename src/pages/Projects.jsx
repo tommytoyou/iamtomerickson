@@ -142,7 +142,7 @@ function Projects() {
               >
                 <Card className="h-full flex flex-col group">
                   {/* Project Image */}
-                  <div className="relative h-56 bg-navy-200 dark:bg-navy-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  <div className="relative h-40 md:h-56 bg-navy-200 dark:bg-navy-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                     <ProjectImage src={project.image} alt={project.title} />
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-accent-500/0 group-hover:bg-accent-500/10 transition-colors duration-300" />
