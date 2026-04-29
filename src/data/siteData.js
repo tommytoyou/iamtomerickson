@@ -67,91 +67,108 @@ export const navigation = [
 
 export const experience = [
   {
+    id: "erickson-space-systems",
+    title: "Founder & Agentic AI Developer",
+    company: "Erickson Space Systems",
+    location: "Remote / Siem Reap, Cambodia",
+    dateRange: "2025 – Present",
+    isCurrent: true,
+    highlights: [
+      "Built and launched TSWI (tswi.us) from scratch in under three months: a real-time space weather intelligence platform ingesting live NOAA and NASA data, running ML-based solar flare forecasts with two-hour prediction horizons, and rendering satellite positions on an interactive 3D CesiumJS globe. Now in private beta with defense and commercial space weather customers.",
+      "Built and launched Grantentic (grantentic.us) in parallel: an AI-powered SBIR Phase I grant writing platform that compresses 16 to 24 hours of specialized grant work into 3 to 5 hours using a Claude API agentic generate, critique, and refine pipeline. Integrated Stripe payments, 7-point automated quality validation, and agency-specific compliance for NSF, DoD, and NASA.",
+      "Designed and shipped both production applications solo without outside development help, covering full stack architecture, API integration, authentication, payments, and deployment."
+    ]
+  },
+  {
     id: "parker-dewey",
-    title: "Independent Consultant",
+    title: "Project Manager | Independent Consultant",
     company: "Parker Dewey",
-    location: "United States (Remote)",
+    location: "Remote",
     dateRange: "May 2024 – Present",
     isCurrent: true,
-    description: "Delivered 29+ high-impact consulting projects with 7 repeat engagements across web development, marketing strategy, business operations, and data analytics.",
-    categories: {
-      webDev: [
-        { name: "Wild Roots Garden & Gifts", details: "Full-stack e-commerce (React, Node.js, MongoDB)" },
-        { name: "Defiant Meals", details: "Restaurant management platform, 5 consecutive projects" },
-        { name: "Easdon Technology Solutions", details: "Order management system" }
-      ],
-      marketing: [
-        { name: "MyLoop", details: "Mobile app GTM strategy, client said 'executing like an industry veteran'" },
-        { name: "Ninnescah LLC", details: "Market analysis" },
-        { name: "Prairie Computer Services", details: "Digital marketing strategy" }
-      ],
-      operations: [
-        { name: "Healthcare Coalition Partners", details: "3-part consulting engagement, KPI frameworks" },
-        { name: "SE Kansas Regional Planning Commission", details: "$2.5M BUILD grant benefit-cost analysis" }
-      ]
-    }
+    highlights: [
+      "Completed 30+ consulting engagements across 15 companies with a 67% repeat client rate, operating in fixed-scope rapid-delivery models across web development, operations strategy, analytics, and go-to-market execution.",
+      "Delivered full-stack web platforms for six repeat clients including Defiant Meals (6 projects), Wild Roots (4 projects), Elevate Heating and Cooling (2 projects), Agricultural Engineering Associates (2 projects), The Bourbon County Monitor (2 projects), and Southeast Kansas Regional Planning Commission (2 projects).",
+      "Supported a $2.5M federal BUILD grant application through benefit-cost analysis and documentation, directly contributing to a regional infrastructure funding bid.",
+      "Designed governance dashboards, KPI frameworks, and decision-support models used by executive stakeholders at nonprofits and healthcare coalitions across Kansas."
+    ]
+  },
+  {
+    id: "dpin-foundation",
+    title: "Project Management Consultant",
+    company: "DPIN Foundation",
+    location: "Remote / Kampot, Cambodia",
+    dateRange: "Aug 2025 – Dec 2025",
+    isCurrent: false,
+    highlights: [
+      "Advanced organizational PM maturity from Level 2 to Level 3 across 7 regional hubs in Southeast Asia and the Middle East through OPM3 assessment and a custom Agile-blockchain hybrid methodology.",
+      "Built a Combined Governance Dashboard with 32 KPIs aligned to PMI standards and ISO 9001, integrating financial planning, QA, risk management, and performance tracking into a single executive view.",
+      "Delivered a 2026-2027 strategic innovation roadmap projecting 30:1 ROI through automation, targeting $100K+ annual cost savings and 30% reduction in manual effort."
+    ]
   },
   {
     id: "deep-space-dynamics",
     title: "Founder & CEO",
     company: "Deep Space Dynamics",
-    location: "Sheridan, Wyoming",
-    dateRange: "June 2024 – December 2025",
+    location: "Sheridan, Wyoming (Remote)",
+    dateRange: "Jun 2024 – Dec 2025",
     isCurrent: false,
-    description: "Led end-to-end development of the Neuman-class 6U SpaceDrone platform for PNT, Tactical Space Weather Intelligence (TSWI), and deep space communications at Lagrange points.",
     highlights: [
-      "TSWI-AI MVP dashboard: 25% faster simulations, AI-driven analytics for autonomous mission planning",
-      "Grantentic GenAI app: automated SBIR Phase 1 grant workflows from ideation to submission",
-      "Secured partnerships: CYber Intel Solutions (post-quantum encryption), SEQRE (secure comms), The Rad Team (radiation resilience)",
-      "SBIR/NSF pitch development for Venus, Earth, Luna, Mars Lagrange points (L4/L5)",
-      "Regulatory preparation: ITAR compliance, FCC licensing"
+      "Led end-to-end development of the Neuman-class 6U SpaceDrone, a scalable platform designed for PNT, tactical space weather intelligence, and deep-space communications across Venus, Earth, Luna, and Mars Lagrange points.",
+      "Secured technical partnerships with firms specializing in post-quantum encryption, secure comms, radiation resilience, and AI-driven space autonomy.",
+      "Reduced simulation timelines by 25% in Agile sprints through AI-driven analytics integration on the TSWI MVP dashboard built during this period."
     ]
   },
   {
     id: "shiftsmart",
     title: "Remote Operations Project Manager",
-    company: "Shiftsmart",
-    location: "Dallas, Texas",
-    dateRange: "September 2020 – December 2022",
+    company: "ShiftSmart",
+    location: "Dallas, Texas (Remote)",
+    dateRange: "Sep 2020 – Dec 2022",
     isCurrent: false,
-    description: "Managed operations for 2,000+ remote polling agents during U.S. federal election cycles.",
+    isOlder: true,
     highlights: [
-      "Cut onboarding time by 40% through structured training and automated feedback loops",
-      "Built stakeholder reporting dashboards in Google Sheets and Airtable"
+      "Cut onboarding time for 2,000+ remote polling agents by 40% by redesigning structured training and implementing automated feedback loops during U.S. federal election cycles.",
+      "Built stakeholder reporting dashboards in Google Sheets and Airtable that gave leadership real-time visibility into agent performance across multiple concurrent deployments."
     ]
   },
   {
     id: "sba",
     title: "CARES Act Agent",
     company: "U.S. Small Business Administration",
-    location: "United States",
-    dateRange: "March 2020 – September 2020",
+    location: "Remote",
+    dateRange: "Mar 2020 – Sep 2020",
     isCurrent: false,
-    description: "Processed PPP and EIDL loan applications during COVID-19 pandemic, handling millions in relief funding for small businesses."
+    isOlder: true,
+    highlights: [
+      "Processed high-volume PPP and EIDL applications during the COVID-19 national emergency, helping small businesses access critical federal relief funding under strict SBA compliance standards."
+    ]
   },
   {
     id: "evolution-worldwide",
-    title: "Project Manager, Sales & Marketing",
+    title: "Sales & Marketing Project Manager",
     company: "Evolution Worldwide",
-    location: "Hong Kong",
-    dateRange: "February 2012 – April 2015",
+    location: "Hong Kong (Remote)",
+    dateRange: "Feb 2012 – Apr 2015",
     isCurrent: false,
     isOlder: true,
-    description: "Client liaison for logo design, web development, and product sales. Contributed to $20M+ sales growth. Coordinated cross-functional teams across time zones."
+    highlights: [
+      "Drove $20M in sales over two years through Agile transformation of the sales pipeline and CRM systems, increasing wholesale transactions 37% from 2013 to 2014.",
+      "Delivered BI dashboards enabling data-informed executive decision making across 3 APAC regions."
+    ]
   },
   {
     id: "tom-erickson-consulting",
     title: "Founder & Principal Consultant",
     company: "Tom Erickson Consulting",
     location: "APAC",
-    dateRange: "January 2008 – February 2020",
+    dateRange: "Jan 2008 – Feb 2020",
     isCurrent: false,
     isOlder: true,
-    description: "International consulting, corporate training, and event management across 20+ countries.",
     highlights: [
-      "Trained 120+ judges at Royal Thai Ministry of Justice",
-      "Executive development programs for Benchmark Inc. and Genus plc",
-      "Mini LLM seminars with Imperial University of Kyushu and Chicago-Kent School of Law"
+      "Trained 120+ judges at the Royal Thai Ministry of Justice in public speaking, business communication, and legal English, measurably improving courtroom communication standards.",
+      "Designed and delivered year-long leadership development programs for mid-level and senior executives at Benchmark Inc. and Genus plc across 20+ countries.",
+      "Facilitated international Mini-LLM seminars in partnership with Imperial University of Kyushu and Chicago-Kent School of Law, expanding legal education access across Southeast Asia."
     ]
   }
 ];

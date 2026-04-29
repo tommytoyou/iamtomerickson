@@ -32,7 +32,6 @@ function CompanyLogo({ companyId }) {
 }
 
 function Experience() {
-  const [expandedId, setExpandedId] = useState(null);
   const [showOlderRoles, setShowOlderRoles] = useState(false);
 
   const { ref, inView } = useInView({
@@ -63,18 +62,8 @@ function Experience() {
     },
   };
 
-  const toggleExpanded = (id) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
-
   const recentRoles = experience.filter((exp) => !exp.isOlder);
   const olderRoles = experience.filter((exp) => exp.isOlder);
-
-  const categoryLabels = {
-    webDev: "Web Development",
-    marketing: "Marketing & Strategy",
-    operations: "Operations & Consulting",
-  };
 
   return (
     <motion.div
@@ -161,77 +150,19 @@ function Experience() {
                           <CompanyLogo companyId={exp.id} />
                         </div>
 
-                        {/* Description */}
-                        <p className="text-navy-600 dark:text-navy-300">{exp.description}</p>
-
-                        {/* Parker Dewey Categories */}
-                        {exp.categories && (
-                          <div className="space-y-4">
-                            {Object.entries(exp.categories).map(([key, items]) => (
-                              <div key={key}>
-                                <h4 className="text-sm font-semibold text-navy-700 dark:text-navy-200 mb-2">
-                                  {categoryLabels[key]}
-                                </h4>
-                                <ul className="space-y-1">
-                                  {items.map((item, idx) => (
-                                    <li
-                                      key={idx}
-                                      className="text-sm text-navy-600 dark:text-navy-300 flex items-start gap-2"
-                                    >
-                                      <span className="w-1.5 h-1.5 rounded-full bg-accent-400 mt-2 flex-shrink-0" />
-                                      <span>
-                                        <strong>{item.name}</strong>: {item.details}
-                                      </span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-
-                        {/* Highlights (Expandable) */}
+                        {/* Highlights */}
                         {exp.highlights && exp.highlights.length > 0 && (
-                          <div>
-                            <button
-                              onClick={() => toggleExpanded(exp.id)}
-                              className="flex items-center gap-2 text-sm text-accent-500 hover:text-accent-400 transition-colors"
-                            >
-                              {expandedId === exp.id ? (
-                                <>
-                                  <ChevronUpIcon className="w-4 h-4" />
-                                  Hide Details
-                                </>
-                              ) : (
-                                <>
-                                  <ChevronDownIcon className="w-4 h-4" />
-                                  Show Details
-                                </>
-                              )}
-                            </button>
-
-                            <AnimatePresence>
-                              {expandedId === exp.id && (
-                                <motion.ul
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: "auto" }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  transition={{ duration: 0.3 }}
-                                  className="mt-3 space-y-2 overflow-hidden"
-                                >
-                                  {exp.highlights.map((highlight, idx) => (
-                                    <li
-                                      key={idx}
-                                      className="text-sm text-navy-600 dark:text-navy-300 flex items-start gap-2"
-                                    >
-                                      <span className="w-1.5 h-1.5 rounded-full bg-accent-400 mt-2 flex-shrink-0" />
-                                      {highlight}
-                                    </li>
-                                  ))}
-                                </motion.ul>
-                              )}
-                            </AnimatePresence>
-                          </div>
+                          <ul className="space-y-2">
+                            {exp.highlights.map((highlight, idx) => (
+                              <li
+                                key={idx}
+                                className="text-sm text-navy-600 dark:text-navy-300 flex items-start gap-2"
+                              >
+                                <span className="w-1.5 h-1.5 rounded-full bg-accent-400 mt-2 flex-shrink-0" />
+                                {highlight}
+                              </li>
+                            ))}
+                          </ul>
                         )}
                       </div>
                     </Card>
@@ -317,10 +248,6 @@ function Experience() {
                                     <CompanyLogo companyId={exp.id} />
                                   </div>
 
-                                  <p className="text-navy-600 dark:text-navy-300">
-                                    {exp.description}
-                                  </p>
-
                                   {exp.highlights && exp.highlights.length > 0 && (
                                     <ul className="space-y-2">
                                       {exp.highlights.map((highlight, idx) => (
@@ -328,7 +255,7 @@ function Experience() {
                                           key={idx}
                                           className="text-sm text-navy-600 dark:text-navy-300 flex items-start gap-2"
                                         >
-                                          <span className="w-1.5 h-1.5 rounded-full bg-navy-400 mt-2 flex-shrink-0" />
+                                          <span className="w-1.5 h-1.5 rounded-full bg-accent-400 mt-2 flex-shrink-0" />
                                           {highlight}
                                         </li>
                                       ))}
