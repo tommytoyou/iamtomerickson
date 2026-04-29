@@ -256,7 +256,7 @@ function Home() {
                     <ul className="space-y-2 text-sm text-navy-600 dark:text-navy-300">
                       <li className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent-400" />
-                        KU Graduation - Dec 2025 (Summa Cum Laude)
+                        KU Graduation - Dec 2025 (Honor Roll)
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent-400" />

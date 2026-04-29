@@ -9,11 +9,11 @@ export const personalInfo = {
   website: "https://iamtomerickson.com",
   companyWebsite: "https://deepspacedynamics.us",
   bio: {
-    short: "Recent KU B.Sc. Project Management graduate (Dec 2025, Summa Cum Laude). Former Founder of Deep Space Dynamics (2024-2025). 15+ years scaling initiatives across aerospace, AI, government, and international markets.",
+    short: "Recent KU B.Sc. Project Management graduate (Dec 2025, Honor Roll). Former Founder of Deep Space Dynamics (2024-2025). 15+ years scaling initiatives across aerospace, AI, government, and international markets.",
     extended: [
       "Founder, project leader, and strategist with 15+ years scaling technology-driven initiatives across aerospace, AI, government programs, and international markets.",
       "Proven ability to lead distributed organizations and translate frontier technologies into viable platforms.",
-      "B.Sc. Project Management from University of Kansas (Summa Cum Laude, Dec 2025). CAPM certified (PMI, 2024)."
+      "B.Sc. Project Management from University of Kansas (Honor Roll, Dec 2025). CAPM certified (PMI, 2024)."
     ]
   },
   openTo: [
@@ -267,7 +267,7 @@ export const certifications = [
 ];
 
 export const education = [
-  { degree: "B.Sc.", field: "Project Management", school: "University of Kansas", year: "Dec 2025", honors: "Summa Cum Laude" },
+  { degree: "B.Sc.", field: "Project Management", school: "University of Kansas", year: "Dec 2025", honors: "Honor Roll" },
   { degree: "A.S.", field: "Business", school: "Lee College", year: "May 2022", honors: "Cum Laude" },
   { degree: "Certificate", field: "Software Engineering", school: "General Assembly", year: "Apr 2021", honors: null }
 ];
