@@ -27,7 +27,7 @@ function ProjectImage({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setHasError(true)}
-      className="absolute inset-0 w-full h-full object-cover object-center"
+      className="absolute inset-0 w-full h-full object-cover object-top"
     />
   );
 }
