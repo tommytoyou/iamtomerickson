@@ -10,15 +10,14 @@ function ProjectImage({ src, alt }) {
 
   if (!src || hasError) {
     return (
-      <>
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-300/50 to-navy-400/50 dark:from-navy-600/50 dark:to-navy-700/50" />
-        <div className="relative text-center">
+      <div className="w-full h-full bg-gradient-to-br from-navy-300/50 to-navy-400/50 dark:from-navy-600/50 dark:to-navy-700/50 flex items-center justify-center">
+        <div className="text-center">
           <ImageIcon className="w-12 h-12 text-navy-400 dark:text-navy-500 mx-auto mb-2" />
           <span className="text-sm text-navy-500 dark:text-navy-400">
             Project Preview
           </span>
         </div>
-      </>
+      </div>
     );
   }
 
@@ -27,7 +26,7 @@ function ProjectImage({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setHasError(true)}
-      className="absolute inset-0 w-full h-full object-cover object-top"
+      className="w-full h-full object-cover object-top"
     />
   );
 }
@@ -142,10 +141,8 @@ function Projects() {
               >
                 <Card className="h-full flex flex-col group">
                   {/* Project Image */}
-                  <div className="relative h-56 bg-navy-200 dark:bg-navy-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  <div className="w-full aspect-video overflow-hidden rounded-t-lg">
                     <ProjectImage src={project.image} alt={project.title} />
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-accent-500/0 group-hover:bg-accent-500/10 transition-colors duration-300" />
                   </div>
 
                   {/* Category Badge */}
