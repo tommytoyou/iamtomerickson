@@ -26,7 +26,7 @@ function ProjectImage({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setHasError(true)}
-      className="w-full h-full object-cover object-top"
+      className="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-150"
     />
   );
 }
