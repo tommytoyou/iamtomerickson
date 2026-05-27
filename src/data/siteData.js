@@ -67,56 +67,73 @@ export const navigation = [
 
 export const experience = [
   {
-    id: "erickson-space-systems",
-    title: "Founder & Agentic AI Developer",
-    company: "Erickson Space Systems",
-    location: "Remote / Siem Reap, Cambodia",
-    dateRange: "2025 – Present",
+    id: "grantentic",
+    title: "Founder",
+    company: "Grantentic",
+    location: "Siem Reap, Cambodia · On-site",
+    dateRange: "Mar 2026 – Present",
     isCurrent: true,
     highlights: [
-      "Built and launched TSWI (tswi.us) from scratch in under three months: a real-time space weather intelligence platform ingesting live NOAA and NASA data, running ML-based solar flare forecasts with two-hour prediction horizons, and rendering satellite positions on an interactive 3D CesiumJS globe. Now in private beta with defense and commercial space weather customers.",
-      "Built and launched Grantentic (grantentic.us) in parallel: an AI-powered SBIR Phase I grant writing platform that compresses 16 to 24 hours of specialized grant work into 3 to 5 hours using a Claude API agentic generate, critique, and refine pipeline. Integrated Stripe payments, 7-point automated quality validation, and agency-specific compliance for NSF, DoD, and NASA.",
-      "Designed and shipped both production applications solo without outside development help, covering full stack architecture, API integration, authentication, payments, and deployment."
+      "Built and launched solo an agentic AI platform that automates SBIR Phase I Project Pitches and full proposals for deep tech, aerospace, and dual-use startups pursuing non-dilutive federal funding from NSF, DoD, and NASA.",
+      "Technical stack: Python, FastAPI, HTMX, and the Claude API. Features a full Generate → Critique → Refine agentic workflow, agency-specific templates, real-time compliance validation, 7-point quality checks, Stripe payments, and exports submission-ready Word documents.",
+      "Responsibilities span full product strategy and roadmap, end-to-end full-stack development, agentic AI workflow design and prompt engineering, customer discovery, payments, infrastructure, deployment, and go-to-market. Live at grantentic.us."
+    ]
+  },
+  {
+    id: "erickson-space-systems",
+    title: "Founder CEO",
+    company: "Erickson Space Systems",
+    location: "Remote",
+    dateRange: "Feb 2026 – Present",
+    isCurrent: true,
+    highlights: [
+      "Early-stage aerospace company developing space situational awareness and space weather intelligence capabilities for satellite operators, aviation, and critical infrastructure.",
+      "TSWI (tswi.us) — a tactical space weather intelligence platform, live in beta — delivers real-time solar monitoring, AI-powered flare predictions, 3D visualization, and operational decision support for satellite operators, aviation, power grid operators, and HF communications users.",
+      "Neuman-C, a 6U CubeSat class designed for space situational awareness and planetary science missions: BOM complete, engineering model in development.",
+      "AI native: AI is embedded at every stage of the development lifecycle, from spacecraft design through operational data services, enabling a small team to ship at the pace and quality previously reserved for large aerospace primes.",
+      "Also supports external clients through contract engagements in agentic AI development, technical program management, and space weather intelligence consulting."
     ]
   },
   {
     id: "parker-dewey",
     title: "Project Manager | Independent Consultant",
     company: "Parker Dewey",
-    location: "Remote",
+    location: "Kansas, United States · Remote",
     dateRange: "May 2024 – Present",
     isCurrent: true,
     highlights: [
-      "Completed 30+ consulting engagements across 15 companies with a 67% repeat client rate, operating in fixed-scope rapid-delivery models across web development, operations strategy, analytics, and go-to-market execution.",
-      "Delivered full-stack web platforms for six repeat clients including Defiant Meals (6 projects), Wild Roots (4 projects), Elevate Heating and Cooling (2 projects), Agricultural Engineering Associates (2 projects), The Bourbon County Monitor (2 projects), and Southeast Kansas Regional Planning Commission (2 projects).",
-      "Supported a $2.5M federal BUILD grant application through benefit-cost analysis and documentation, directly contributing to a regional infrastructure funding bid.",
-      "Designed governance dashboards, KPI frameworks, and decision-support models used by executive stakeholders at nonprofits and healthcare coalitions across Kansas."
+      "Led a portfolio of 30+ short-cycle consulting engagements for small businesses, nonprofits, and regional organizations, delivering multi-workstream programs across digital delivery, operations strategy, analytics, and go-to-market execution.",
+      "Owned program scoping, stakeholder alignment, delivery planning, and execution across parallel initiatives, translating ambiguous business needs into execution-ready roadmaps, dashboards, and operating frameworks.",
+      "Managed 20+ concurrent initiatives across technology, marketing, operations, and analytics workstreams; delivered governance dashboards, KPI frameworks, and decision-support models for executive stakeholders.",
+      "Supported a $2.5M BUILD grant application through benefit–cost analysis and documentation. Designed and executed Agile delivery workflows for repeatable, fast-turn implementations."
     ]
   },
   {
     id: "dpin-foundation",
     title: "Project Management Consultant",
     company: "DPIN Foundation",
-    location: "Remote / Kampot, Cambodia",
+    location: "Kampot, Cambodia · Remote",
     dateRange: "Aug 2025 – Dec 2025",
     isCurrent: false,
     highlights: [
-      "Advanced organizational PM maturity from Level 2 to Level 3 across 7 regional hubs in Southeast Asia and the Middle East through OPM3 assessment and a custom Agile-blockchain hybrid methodology.",
-      "Built a Combined Governance Dashboard with 32 KPIs aligned to PMI standards and ISO 9001, integrating financial planning, QA, risk management, and performance tracking into a single executive view.",
-      "Delivered a 2026-2027 strategic innovation roadmap projecting 30:1 ROI through automation, targeting $100K+ annual cost savings and 30% reduction in manual effort."
+      "Led strategic project management initiatives for a decentralized computing infrastructure nonprofit across 7 regional hubs in Southeast Asia, Middle East, and beyond.",
+      "Conducted OPM3 maturity assessment and designed custom Agile-blockchain hybrid PM methodology, advancing organizational maturity from Level 2 to Level 3.",
+      "Built a Combined Governance Dashboard integrating financial planning, QA, risk management, and performance tracking with 32 KPIs aligned to PMI standards and ISO 9001.",
+      "Created operational efficiency roadmap projecting 30:1 ROI through automation, targeting $100K+ annual cost savings and 30% reduction in manual effort. Delivered 2026-2027 strategic innovation roadmap including GPU network scaling (5x growth), enterprise sales frameworks, and market expansion plans."
     ]
   },
   {
     id: "deep-space-dynamics",
-    title: "Founder & CEO",
+    title: "Project Manager, Space Systems & GenAI | Founder & CEO",
     company: "Deep Space Dynamics",
-    location: "Sheridan, Wyoming (Remote)",
+    location: "Sheridan, Wyoming, United States · Remote",
     dateRange: "Jun 2024 – Dec 2025",
     isCurrent: false,
     highlights: [
-      "Led end-to-end development of the Neuman-class 6U SpaceDrone, a scalable platform designed for PNT, tactical space weather intelligence, and deep-space communications across Venus, Earth, Luna, and Mars Lagrange points.",
-      "Secured technical partnerships with firms specializing in post-quantum encryption, secure comms, radiation resilience, and AI-driven space autonomy.",
-      "Reduced simulation timelines by 25% in Agile sprints through AI-driven analytics integration on the TSWI MVP dashboard built during this period."
+      "Led the end-to-end development of the Neuman-class 6U SpaceDrone, a scalable platform designed for PNT, Tactical Space Weather Intelligence, and deep space high-bandwidth comms. Directed multi-disciplinary team across remote locations to finalize standard Neuman architecture, payload specs, and mission profiles.",
+      "Directed SBIR abstract and NSF pitch for a proof-of-concept deployment of CubeSats at Venus, Earth, Luna, and Mars gravitationally stable Lagrange points (L4/L5). Secured technical partnerships in post-quantum encryption (CYber Intel Solutions), secure comms (SEQRE), radiation resilience (The Rad Team), and AI-driven space autonomy.",
+      "Developed TSWI MVP dashboard for real-time space weather intelligence, integrating AI-driven analytics for Lagrange point monitoring and autonomous mission planning — reduced simulation timelines by 25% in Agile sprints.",
+      "Built Grantentic GenAI app starting with SBIR Phase I grant applications, automating proposal workflows from ideation to submission using AI-driven generate, critique, and refine pipelines."
     ]
   },
   {
