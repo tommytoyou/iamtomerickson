@@ -1,13 +1,13 @@
 export const personalInfo = {
   name: "Tom Erickson",
   credentials: "CAPM",
-  headline: "Agentic AI Developer and Technical PM | SBIR Automation · Space Weather Intelligence | DARPA Connect | Open to Gulf Contracts",
-  tagline: "Building production AI systems and leading technical projects across aerospace, government programs, and international markets. Based in Siem Reap, Cambodia.",
-  location: "Siem Reap, Cambodia",
-  locationNote: "Remote/Global",
+  headline: "Agentic AI Developer and Technical PM | SBIR Automation · Space Weather Intelligence | DARPA Connect",
+  tagline: "Building production AI systems and leading technical projects across aerospace, government programs, and international markets.",
+  location: "Remote",
+  locationNote: "Global",
   email: "tom@iamtomerickson.com",
   website: "https://iamtomerickson.com",
-  companyWebsite: "https://deepspacedynamics.us",
+  companyWebsite: "https://tswi.us",
   bio: {
     short: "Recent KU B.Sc. Project Management graduate (Dec 2025, Honor Roll). Former Founder of Deep Space Dynamics (2024-2025). 15+ years scaling initiatives across aerospace, AI, government, and international markets.",
     extended: [
@@ -24,8 +24,8 @@ export const personalInfo = {
   stats: [
     { value: "37+", label: "Upwork Engagements" },
     { value: "15+", label: "Years Experience" },
-    { value: "15+", label: "Clients" },
-    { value: "67%", label: "Repeat Rate" }
+    { value: "18", label: "Years Toastmasters" },
+    { value: "6", label: "PMI Credentials" }
   ],
   closingStatement: "Let's build something that matters."
 };
@@ -70,7 +70,7 @@ export const experience = [
     id: "grantentic",
     title: "Founder",
     company: "Grantentic",
-    location: "Siem Reap, Cambodia · On-site",
+    location: "Remote",
     dateRange: "Mar 2026 – Present",
     isCurrent: true,
     highlights: [
@@ -112,11 +112,11 @@ export const experience = [
     id: "dpin-foundation",
     title: "Project Management Consultant",
     company: "DPIN Foundation",
-    location: "Kampot, Cambodia · Remote",
+    location: "Remote",
     dateRange: "Aug 2025 – Dec 2025",
     isCurrent: false,
     highlights: [
-      "Led strategic project management initiatives for a decentralized computing infrastructure nonprofit across 7 regional hubs in Southeast Asia, Middle East, and beyond.",
+      "Led strategic project management initiatives for a decentralized computing infrastructure nonprofit across 7 regional hubs worldwide.",
       "Conducted OPM3 maturity assessment and designed custom Agile-blockchain hybrid PM methodology, advancing organizational maturity from Level 2 to Level 3.",
       "Built a Combined Governance Dashboard integrating financial planning, QA, risk management, and performance tracking with 32 KPIs aligned to PMI standards and ISO 9001.",
       "Created operational efficiency roadmap projecting 30:1 ROI through automation, targeting $100K+ annual cost savings and 30% reduction in manual effort. Delivered 2026-2027 strategic innovation roadmap including GPU network scaling (5x growth), enterprise sales frameworks, and market expansion plans."
@@ -132,8 +132,7 @@ export const experience = [
     highlights: [
       "Led the end-to-end development of the Neuman-class 6U SpaceDrone, a scalable platform designed for PNT, Tactical Space Weather Intelligence, and deep space high-bandwidth comms. Directed multi-disciplinary team across remote locations to finalize standard Neuman architecture, payload specs, and mission profiles.",
       "Directed SBIR abstract and NSF pitch for a proof-of-concept deployment of CubeSats at Venus, Earth, Luna, and Mars gravitationally stable Lagrange points (L4/L5). Secured technical partnerships in post-quantum encryption (CYber Intel Solutions), secure comms (SEQRE), radiation resilience (The Rad Team), and AI-driven space autonomy.",
-      "Developed TSWI MVP dashboard for real-time space weather intelligence, integrating AI-driven analytics for Lagrange point monitoring and autonomous mission planning — reduced simulation timelines by 25% in Agile sprints.",
-      "Built Grantentic GenAI app starting with SBIR Phase I grant applications, automating proposal workflows from ideation to submission using AI-driven generate, critique, and refine pipelines."
+      "Developed TSWI MVP dashboard for real-time space weather intelligence, integrating AI-driven analytics for Lagrange point monitoring and autonomous mission planning."
     ]
   },
   {
@@ -171,21 +170,20 @@ export const experience = [
     isOlder: true,
     highlights: [
       "Drove $20M in sales over two years through Agile transformation of the sales pipeline and CRM systems, increasing wholesale transactions 37% from 2013 to 2014.",
-      "Delivered BI dashboards enabling data-informed executive decision making across 3 APAC regions."
+      "Delivered BI dashboards enabling data-informed executive decision making across 3 regions."
     ]
   },
   {
     id: "tom-erickson-consulting",
     title: "Founder & Principal Consultant",
     company: "Tom Erickson Consulting",
-    location: "APAC",
+    location: "International",
     dateRange: "Jan 2008 – Feb 2020",
     isCurrent: false,
     isOlder: true,
     highlights: [
-      "Trained 120+ judges at the Royal Thai Ministry of Justice in public speaking, business communication, and legal English, measurably improving courtroom communication standards.",
-      "Designed and delivered year-long leadership development programs for mid-level and senior executives at Benchmark Inc. and Genus plc across 20+ countries.",
-      "Facilitated international Mini-LLM seminars in partnership with Imperial University of Kyushu and Chicago-Kent School of Law, expanding legal education access across Southeast Asia."
+      "Designed and delivered year-long leadership development programs for mid-level and senior executives at Benchmark Inc. and Genus plc.",
+      "Facilitated international Mini-LLM seminars in partnership with Imperial University of Kyushu and Chicago-Kent School of Law."
     ]
   }
 ];
@@ -194,7 +192,7 @@ export const projects = [
   {
     id: "neuman-spacedrone",
     title: "Neuman-class SpaceDrone",
-    company: "Deep Space Dynamics",
+    company: "Erickson Space Systems",
     category: "Space Tech",
     description: "6U CubeSat platform designed for PNT, space weather intelligence, and deep space communications at Venus, Earth, Luna, and Mars Lagrange points (L4/L5).",
     tags: ["CubeSat", "PNT", "Deep Space", "Aerospace"],
@@ -203,9 +201,9 @@ export const projects = [
   {
     id: "tswi-dashboard",
     title: "TSWI-AI Dashboard",
-    company: "Deep Space Dynamics",
+    company: "Erickson Space Systems",
     category: "AI/Space",
-    description: "Real-time Tactical Space Weather Intelligence platform with AI-driven analytics, 25% faster simulations, and autonomous mission planning capabilities.",
+    description: "Real-time Tactical Space Weather Intelligence platform with AI-driven analytics and autonomous mission planning capabilities.",
     tags: ["AI", "Dashboard", "Space Weather", "Real-time"],
     url: "https://tswi.us",
     image: "/images/projects/tswi.jpg"
@@ -213,7 +211,7 @@ export const projects = [
   {
     id: "grantentic",
     title: "Grantentic GenAI",
-    company: "Deep Space Dynamics",
+    company: "Grantentic",
     category: "GenAI/SaaS",
     description: "AI-powered application automating SBIR Phase 1 grant workflows from ideation to submission.",
     tags: ["GenAI", "SaaS", "Grant Writing", "Automation"],
@@ -276,7 +274,7 @@ export const skills = {
 export const certifications = [
   { name: "CAPM", fullName: "Certified Associate in Project Management", issuer: "PMI", year: "2024" },
   { name: "PMI GenAI", fullName: "Prompt Engineering for Project Managers", issuer: "PMI", year: "2025" },
-  { name: "CPMAI", fullName: "Cognitive Project Management in AI", issuer: "PMI", year: "2024" },
+  { name: "CPMAI", fullName: "Cognitive Project Management in AI", issuer: "PMI", year: "2025" },
   { name: "Data Landscape", fullName: "Data Landscape of GenAI for PMs", issuer: "PMI", year: "2024" },
   { name: "Space Mission", fullName: "Process and Lifetime of a Space Mission", issuer: "Certificate", year: "2024" },
   { name: "Memory Trainer", fullName: "Certified Memory Trainer", issuer: "Certificate", year: "" },
@@ -294,7 +292,6 @@ export const affiliations = ["DARPA Connect", "PMI", "Toastmasters International
 export const languages = [
   { name: "English", level: "Native" },
   { name: "French", level: "Elementary" },
-  { name: "Thai", level: "Elementary" },
   { name: "Spanish", level: "Elementary" }
 ];
 
