@@ -99,8 +99,8 @@ export const experience = [
     title: "Project Manager | Independent Consultant",
     company: "Parker Dewey",
     location: "Kansas, United States · Remote",
-    dateRange: "May 2024 – Present",
-    isCurrent: true,
+    dateRange: "May 2024 – Aug 2026",
+    isCurrent: false,
     highlights: [
       "Led a portfolio of 30+ short-cycle consulting engagements for small businesses, nonprofits, and regional organizations, delivering multi-workstream programs across digital delivery, operations strategy, analytics, and go-to-market execution.",
       "Owned program scoping, stakeholder alignment, delivery planning, and execution across parallel initiatives, translating ambiguous business needs into execution-ready roadmaps, dashboards, and operating frameworks.",
